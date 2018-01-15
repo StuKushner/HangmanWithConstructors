@@ -23,7 +23,9 @@ var hangman = {
 
 		playHangman = new checkWord(this.chosenWord);
 		playHangman.displayWord();
-		console.log("You have " + hangman.numGuesses + " remaining");
+		console.log("**********************");
+		console.log("You have " + hangman.numGuesses + " guesses remaining");
+		console.log("**********************");
 		promptUser();
 	}
 };
@@ -46,7 +48,9 @@ function promptUser() {
 		]).then(function(guess){
 			var userGuess = guess.letter.toLowerCase();
 			if (isLetter && guessedLetters.indexOf(userGuess) != -1) {
+				console.log("**********************");
 				console.log("You already guessed that letter. Please guess again.");
+				console.log("**********************");
 				promptUser();
 			} else {
 				guessedLetters.push(userGuess);
@@ -58,22 +62,29 @@ function promptUser() {
 					playHangman.displayWord();
 					if (playHangman.youWin) {
 						console.log("Congratulations! You Win!");
+						console.log("**********************");
 						return;
 					} else {
-						console.log("You have " + hangman.numGuesses + " remaining");
+						console.log("**********************");
+						console.log("You have " + hangman.numGuesses + " guesses remaining");
+						console.log("**********************");
 						promptUser();
 					}
 				} else {
 					console.log("Wrong!");
 					hangman.numGuesses--;
-					console.log("You have " + hangman.numGuesses + " remaining");
+					console.log("**********************");
+					console.log("You have " + hangman.numGuesses + " guesses remaining");
+					console.log("**********************");
 					promptUser();
 				}
 			}
 		});
 	} else {
+		console.log("**********************");
 		console.log("You ran out of allowed guesses.");
 		console.log("The correct answer was " + hangman.chosenWord);
+		console.log("**********************");
 	}
 }
 

@@ -6,7 +6,7 @@ var checkWord = function(word, correctGuesses) {
 
 	this.displayWord = function() {
 		var numBlanks = "";
-		if (this.correct == undefined) {
+		if (this.correct === undefined) {
 			for (var i = 0; i < this.chosenAnimal.length; i++) {
 				numBlanks += "_";
 			}
@@ -25,7 +25,7 @@ var checkWord = function(word, correctGuesses) {
 				}
 			}
 		}
-		this.displayString = numBlanks.trim();
+		this.displayString = numBlanks;
 		console.log(this.displayString);
 
 		if (this.displayString === this.chosenAnimal) {
