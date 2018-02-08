@@ -1,3 +1,7 @@
-# ConstructorHangman
+# Constructor Hangman
 
-Basically hangman, but through node and with constructors! See if you can guess correctly!
+This app creates a Hangman game, but uses node.js and constructor functions. 
+
+# Used
+
+Node.js, Javascript Constructors
