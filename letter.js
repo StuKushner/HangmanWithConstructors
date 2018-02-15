@@ -1,3 +1,4 @@
+// Check if letter is in the word
 function checkLetter (letter, word) {
 	if (word.indexOf(letter) != -1) {
 		return true;
@@ -6,4 +7,5 @@ function checkLetter (letter, word) {
 	}
 }
 
+// Export for the other files to use
 module.exports = checkLetter;
